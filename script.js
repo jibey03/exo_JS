@@ -6,9 +6,17 @@ function elementsCommuns(liste1, liste2) {
     return communs;
 }
 
+function button() {
+    
+}
 
 
-document.write(liste1 = [2,4,5,0,7])
-document.write(liste2 = [2,7,6,46,58])
+
+liste1 = [2,4,5,0,7]
+liste2 = [2,7,6,46,58]
+
+document.write("liste1 = [2,4,5,0,7] \n")
+
+document.write("liste2 = [2,7,6,46,58] \n")
 
 document.write(elementsCommuns(liste1, liste2));

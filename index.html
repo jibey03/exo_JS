@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+
 </head>
 <body>
-    <button id="button_intersection"></button>
+    <button id="button_intersection">Intersection</button>
+    
+    <script>
+        let buttonIntersection = document.getElementById('button_intersection');
+
+        
+        buttonIntersection.onclick = function() {
+            afficherElementsCommuns();
+        };
+
+        function afficherElementsCommuns() {
+            let liste1 = [2, 4, 5, 0, 7];
+            let liste2 = [2, 7, 6, 46, 58];
+
+            document.write("liste1 = [2, 4, 5, 0, 7]<br>");
+            document.write("liste2 = [2, 7, 6, 46, 58]<br>");
+
+            let communs = elementsCommuns(liste1, liste2);
+            document.write("Éléments communs : " + communs);
+        }
+
+        function elementsCommuns(liste1, liste2) {
+            let ensemble = new Set(liste1);
+            let communs = liste2.filter(element => ensemble.has(element));
+            return communs;
+        }
+    </script>
 </body>
 </html>
